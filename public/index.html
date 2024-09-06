@@ -1,0 +1,576 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choisir mon PC monté</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="bekos.css">
+</head>
+<body>
+
+    <section id="typePC">
+
+        <h1>Quelle est l'utilisation principale de votre PC monté?</h1>
+
+        <div class="button-container">
+    
+            <button class="type-button " onclick="displayTravail()">Travail ou étude</button>
+            <button class="type-button" onclick="displayGaming()">Gaming</button>
+        </div>
+        
+
+    </section>
+
+    <section>
+
+       <form id="Travail" action="/submit" method="POST"  >
+        <input type="hidden" name="formId" value="Travail">
+
+        <div class="center">
+
+            <ol>
+                <li>Comment est votre activité sur votre PC?</li>
+
+                <div class="workstation1">
+
+                    <div class="borders">
+
+                        <input type="radio" id="activity1" name="question1" value="1" >
+                        <label for="activity1">
+                            <span class="titre">Occasionnelle,</span>
+                            <span class="text">Des programmes de base, Navigation sur Internet, traitement de texte, et visionnage de vidéos en streaming.</span> 
+                        </label>
+
+                    </div>
+
+                    <div class="borders">
+
+                        <input type="radio" id="activity2" name="question1" value="2" >
+                        <label for="activity2">
+                            <span class="titre"> Régulière,</span>
+                            <span class="text">Utilisation de logiciels bureautiques avancés, création de présentations, et gestion de fichiers multimédias.</span> 
+                        </label>
+
+                    </div>    
+                
+                    <div class="borders">
+
+                        <input type="radio" id="activity3" name="question1" value="3" >
+                        <label for="activity3">
+                            <span class="titre">Intensive,</span>
+                            <span class="text">Jeux vidéo, montage vidéo, modélisation 3D, et développement de logiciels.</span>   
+                        </label>
+
+                    </div>
+                
+                </div>
+
+
+                <li>Quelles sont les programmes et les logiciels que vous utilisez ?</li>
+
+                <div class="workstation2">
+
+                    <input type="radio" id="logiciel1" name="question2" value="1">
+                    <label for="logiciel1">
+                        <span class="software">Essentiel bureautique: Powerpoint, Excel, Word...</span>
+
+                        <div class="image">
+                            <img src="images/Word.png" alt="Word">
+                            <img src="images/Powerpoint.png" alt="powerpoint">
+                            <img src="images/Excel.png" alt="Excel">
+                        </div>
+                    
+                    </label>
+
+                    <input type="radio" id="logiciel2" name="question2" value="2">
+                    <label for="logiciel2">
+                        <span class="software">Adobe Creative Suite: Photoshop, Illustrator, InDesign</span>
+                        <div class="image">
+                            <img class="images" src="images/Illustrator.png" alt="Illustrator">
+                            <img class="images" src="images/Photoshop.png" alt="Photoshop">
+                            <img class="images" src="images/Indesign.png" alt="InDesign">
+                        </div>
+
+                    </label>
+
+                    <input type="radio" id="logiciel3" name="question2" value="3">
+                    <label for="logiciel3">
+                        <span class="software">Motion Design: Montage vidéo et effets spéciaux</span>
+                        <div class="image">
+                            <img class="images" src="images/Adobe animate.png" alt="An">
+                            <img class="images" src="images/After effects.png" alt="Ae">
+                            <img class="images" src="images/Premiere pro.png" alt="Pr">
+                        </div>
+                    </label>
+
+                    <input type="radio" id="logiciel4" name="question2" value="4">
+                    <label for="logiciel4">
+                        <span class="software">Modélisation 3D: Design et rendu 3D</span>
+                        <div class="image">
+                            <img class="images" src="images/AutoDesk.png" alt="Autodesk">
+                            <img class="images" src="images/Solidworks-Logo.png" alt="solidworks">
+                            <img class="images" src="images/Cinema-4D-Logo.png" alt="cinema4D">
+                        </div>
+                    </label>
+
+                </div>
+
+                <li>Quelle importance accordez-vous à la performance graphique?</li>
+
+                <div class="workstation3">
+
+                    <div>
+                        <input type="radio" id="resolution1" name="question3" value="1">
+                        <label for="resolution1">
+                            <span class="graphique">Haut de Gamme (modélistation 3D & rendu vidéo)</span>
+                        </label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" id="resolution2" name="question3" value="2">
+                        <label for="resolution2">
+                            <span class="graphique">Milieu de gamme (traitement d'image & édition vidéo)</span>                   
+                        </label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="resolution3" name="question3" value="3">
+                        <label for="resolution3">
+                            <span class="graphique">Entrée de Gamme (travail quotidien & taches graphiques occasionnelles)</span>
+                        </label>
+                    </div>
+
+                </div>
+
+                <li> Quel est le niveau de complexité de vos projets ?  </li>
+
+                <div class="workstation3">
+                    <div>
+                        <input type="radio" id="niveau1" name="question4" value="1" >
+                        <label for="niveau1">
+                            <span class="graphique">Projets simples: Fichiers de taille modérée</span> 
+                        </label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="niveau2" name="question4" value="2">
+                        <label for="niveau2">
+                            <span class="graphique">Projets intermédiaires: Fichiers complexes & multitâches  </span>
+                        </label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="niveau3" name="question4" value="3">
+                        <label for="niveau3">
+                            <span class="graphique">Projets avancés: Gros fichiers nécessitant des capacités de rendu élevées </span> 
+                        </label>
+                    </div>
+
+                </div>
+
+                <li> Combien de logiciels utilisez-vous simultanément sur votre ordinateur ?  </li>
+
+                <div class="workstation3">
+
+                    <div>
+                        <input type="radio" id="nombre1" name="question5" value="1">
+                        <label for="nombre1">
+                            <span class="graphique">1 à 2 logiciels à la fois</span>
+                        </label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="nombre2" name="question5" value="2">
+                        <label for="nombre2">
+                            <span class="graphique">2 à 3 logiciels à la fois </span> 
+                        </label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="nombre3" name="question5" value="3">
+                        <label for="nombre3">
+                            <span class="graphique">Plus de 3 logicels à la fois</span>
+                        </label>
+                    </div>
+
+                </div>
+
+                <li> Envisagez-vous d'explorer d'autres domaines ? </li>
+
+                <div class="workstation1">
+                    <div class="borders">
+                        <input type="radio" id="domaine1" name="question6" value="1">
+                        <label for="domaine1">
+                            <span class="titre">Oui,</span>
+                            <span class="text">je vais installer plusieurs logiciels.</span>
+                        </label>
+                    </div>
+                    <div class="borders">
+                        <input type="radio" id="domaine2" name="question6" value="2">
+                        <label for="domaine2">
+                            <span class="titre">Non,</span>
+                            <span class="text">je me concentre principalement sur mon domaine.</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <li> Prévoyez-vous de mettre à niveau votre PC Pro à l'avenir ?</li>
+
+                <div class="workstation1">
+                    <div class="borders">
+                        <input type="radio" id="option1" name="question7" value="1">
+                        <label for="option1">
+                            <span class="titre">Oui,</span>
+                            <span class="text">je veux une configuration évolutive.</span>
+                        </label>
+                    </div>
+                    <div class="borders">
+                        <input type="radio" id="option2" name="question7" value="2">
+                        <label for="option2">
+                            <span class="titre">Non,</span>
+                            <span class="text">je préfère une configuration qui durera plusieurs années sans besoin de mise à niveau.</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <li>Préférez-vous un processeur Intel ou AMD ? </li>
+
+                    <div class="workstation4">
+                        <div class="processor">
+                            <input type="radio" id="intel" name="question8" value="1" >
+                            <label for="intel">
+                                Intel
+                            </label>
+                        </div>
+
+                        <div class="processor">
+                            <input type="radio" id="AMD" name="question8" value="2">
+                            <label for="AMD">
+                                AMD
+                            </label>
+                        </div>
+
+                    </div>
+
+                    <li>Quel est votre budget approximatif pour cette configuration ? </li>
+
+                    <div class="workstation5">
+                        <div>                        
+                            <input type="radio" id="prix1" name="question9" value="1">
+                            <label for="prix1">
+                                <span class="graphique">Moins de 1500 TND</span>
+                            </label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="prix2" name="question9" value="2">
+                            <label for="prix2">
+                                <span class="graphique">Entre 1500 TND et 3000 TND</span>
+                            </label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="prix3" name="question9" value="3">
+                            <label for="prix3">
+                                <span class="graphique">Entre 3000 TND et 5000 TND</span>
+                            </label>
+                        </div>
+
+                        <div>                        
+                            <input type="radio" id="prix4" name="question9" value="4">
+                            <label for="prix4">
+                                <span class="graphique">Pas de limite, je suis prêt à investir</span>
+                            </label>
+                        </div>
+
+                    </div>
+
+            </ol>
+
+            <button type="submit" id="submit-button" class="type-button">Obtenz des recommondations</button>
+
+
+        </div>
+
+        
+       </form>
+
+       <div id="recommendation" style="display:none;">
+                    
+            <p id="product-link"></p>
+        </div>
+
+    </section>
+
+    <section >
+
+        <form id="Gaming" action="/submit" method="post"> 
+
+            <input type="hidden" name="formId" value="Gaming">
+
+            <div class="center">
+                <ol>
+
+                    <li>Quelle est votre expérience de jeu actuelle ? </li>
+
+                    <div class="workstation1">
+                        <div class="borders">
+                            <input type="radio" id="experience1" name="questionn1" value="1" >
+                            <label for="experience1">
+                                <span class="titre">Débutant,</span>
+                                <span class="text">nouveau/nouvelle dans le gaming.</span>           
+                            </label>
+                        </div>
+                        
+                        <div class="borders">
+                            <input type="radio" id="experience2" name="questionn1" value="2">
+                            <label for="experience2">
+                                <span class="titre">Intermédiaire,</span>
+                                <span class="text">J'ai déjà joué à quelques jeux et je veux améliorer mon expérience.</span>                       
+                            </label>
+                        </div>
+
+                        <div class="borders">
+                            <input type="radio" id="experience3" name="questionn1" value="3">
+                            <label for="experience3">
+                                <span class="titre">Avancé,</span>
+                                <span class="text">un joueur régulier avec une bonne expérience.  </span>     
+                            </label>
+                        </div>
+
+                    </div>
+
+                    <li>Quels types de jeux aimez-vous jouer ? </li>
+
+                    <div class="workstation6">
+
+                        <input type="radio" id="game1" name="questionn2" value="1">
+                        <label for="game1">
+                            <span class="gaming">Jeux d'action et de tir (FPS)</span>
+    
+                            <div class="image-gaming">
+                                <img src="images/call-of-duty.png" width="290px"  alt="call of duty">
+                            </div>
+                        
+                        </label>
+    
+                        <input type="radio" id="game2" name="questionn2" value="2">
+                        <label for="game2">
+                            <span class="gaming">Jeux de rôle (RPG)</span>
+                            <div class="image-gaming">
+                                <img src="images/thewitcher.png" width="280px"  alt="The witcher">
+                            </div>
+    
+                        </label>
+    
+                        <input type="radio" id="game3" name="questionn2" value="3">
+                        <label for="game3">
+                            <span class="gaming">jeu de construction et d'exploration</span>
+                            <div class="image-gaming">
+                                <img src="images/minecraft.png" alt="Minecraft">
+                            </div>
+                        </label>
+    
+                        <input type="radio" id="game4" name="questionn2" value="4">
+                        <label for="game4">
+                            <span class="gaming">Jeux de sport ou de simulation</span>
+                            <div class="image-gaming">
+                                <img src="images/fifa (2).png"  alt="FIFA">
+                            </div>
+                        </label>
+
+                        <input type="radio" id="game5" name="questionn2" value="5">
+                        <label for="game5">
+                            <span class="gaming">Les “ multiplayer online battle Arena” (MOBA)</span>
+                            <div  class="image-gaming">
+                                <img src="images/lol.png"  alt="LOL">
+                            </div>
+                        </label>
+    
+                    </div>
+
+                    <li >Pensez-vous faire du streaming ou enregistrer vos Gameplays ?</li>
+
+                    <div class="workstation1">
+
+                        <div class="borders">
+    
+                            <input type="radio" id="streaming_gaming1" name="questionn3" value="1">
+                            <label for="streaming_gaming1">
+                                <span class="titre">Oui,</span>
+                                <span class="text">je fais du streaming en direct.</span> 
+                            </label>
+    
+                        </div>
+    
+                        <div class="borders">
+    
+                            <input type="radio" id="streaming_gaming2" name="questionn3" value="2">
+                            <label for="streaming_gaming2">
+                                <span class="titre">Oui,</span>
+                                <span class="text">je capture uniquement les meilleurs moments et les compilé sur une vidéo.</span> 
+                            </label>
+    
+                        </div>    
+                    
+                        <div class="borders">
+    
+                            <input type="radio" id="streaming_gaming3" name="questionn3" value="3">
+                            <label for="streaming_gaming3">
+                                <span class="titre">Non,</span>
+                                <span class="text">je me concentre principalement sur le Gaming.</span>   
+                            </label>
+    
+                        </div>
+                    
+                    </div>
+
+                    <li>Préférez-vous un processeur Intel ou AMD ? </li>
+
+                    <div class="workstation4">
+                        <div class="processor">
+                            <input type="radio" id="proceesor1" name="questionn4" value="1">
+                            <label for="proceesor1">
+                                Intel
+                            </label>
+                        </div>
+
+                        <div class="processor">
+                            <input type="radio" id="proceesor2" name="questionn4" value="2">
+                            <label for="proceesor2">
+                                AMD
+                            </label>
+                        </div>
+
+                    </div>
+
+                <li>Quelle importance accordez-vous à la qualité graphique ? </li>
+
+                <div class="workstation3">
+                    <div>
+                        <input type="radio" id="graphisme-gaming1" name="questionn5" value="1">
+                        <label for="graphisme-gaming1">
+                            <span class="graphique">Graphismes simples</span>
+                        </label>
+                    </div>
+
+                    <div>
+                        <input type="radio"id="graphisme-gaming2" name="questionn5" value="2">
+                        <label for="graphisme-gaming2">
+                            <span class="graphique">Graphismes décents avec des couleurs réalistes</span> 
+                        </label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="graphisme-gaming3" name="questionn5" value="3">
+                        <label for="graphisme-gaming3">
+                            <span class="graphique"> Graphismes de haute qualité avec des détails et des effets visuels impressionnants.</span>
+                        </label>
+                    </div>
+
+                </div>
+
+                <li>Une session de jeu pour toi, ça dure en général? </li>
+
+                <div class="workstation3">
+                    <div>
+                        <input type="radio" id="time-gaming2" name="questionn6" value="1">
+                        <label for="time-gaming2">
+                            <span class="graphique">1 à 3 heures  </span>
+                        </label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="time-gaming3" name="questionn6" value="2">
+                        <label for="time-gaming3">
+                            <span class="graphique">3 à 5 heures</span> 
+                        </label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="time-gaming4" name="questionn6" value="3">
+                        <label for="time-gaming4">
+                            <span class="graphique">All Day, moins je dors plus je suis fort</span>
+                        </label>
+                    </div>
+
+                </div>
+
+                <li>Pour vous, quelle est le plus important?</li>
+
+                <div class="workstation3">
+                    <div>
+                        <input type="radio" id="preference1" name="questionn7" value="1">
+                        <label for="preference1">
+                            <span class="graphique">L'esthétique : boitier sophistiqué, effet RGB, LED STRIP. </span>
+                        </label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="preference2" name="questionn7" value="2">
+                        <label for="preference2">
+                            <span class="graphique">La performance : manipulation fluide, capable de gérer tout.</span> 
+                        </label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="preference3" name="questionn7" value="3">
+                        <label for="preference3">
+                            <span class="graphique">Équilibre : Combinaison harmonieuse d'esthétique et de performance. </span>
+                        </label>
+                    </div>
+
+                </div>
+
+                <li>Quel est votre budget approximatif pour cette configuration ?</li>
+
+                <div class="workstation3">
+                    <div>
+                        <input type="radio" id="prix_gaming1" name="questionn8" value="1">
+                        <label for="prix_gaming1">
+                            <span class="graphique">Moins de 1500 TND </span>
+                        </label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="prix_gaming2" name="questionn8" value="2">
+                        <label for="prix_gaming2">
+                            <span class="graphique">Entre 1500 TND et 3000 TND</span> 
+                        </label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="prix_gaming3" name="questionn8" value="3">
+                        <label for="prix_gaming3">
+                            <span class="graphique"> Entre 3000 TND et 5000 TND </span>
+                        </label>
+                    </div>
+
+                </div>
+
+                        
+            </ol>
+
+            <button type="submit" id="submit-button" class="type-button">Obtenz des recommondations</button>
+
+            </div>
+
+        </form>
+
+        <div id="recommendation" style="display:none;">
+                    
+            <p id="product-link"></p>
+        </div>
+
+
+    </section>
+    
+    
+    <script src="script.js"></script>
+    <script src="script.js"></script>
+    <script src="client.js"></script>
+
+</body>
+</html>

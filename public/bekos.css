@@ -1,0 +1,66 @@
+/**************** extend css start ****************/
+@import url("https://fonts.googleapis.com/css?family=Aclonica|Poppins:300,400,500,600&display=swap");
+
+.type-button {
+  background-image: -webkit-gradient(linear, right top, left top, from(#ff0000), color-stop(51%, #c6019a), to(#ff0000));
+  background-image: -webkit-linear-gradient(right, #ff0000 0%, #c6019a 51%, #ff0000 100%);
+  background-image: -o-linear-gradient(right, #ff0000 0%, #c6019a 51%, #ff0000 100%);
+  background-image: linear-gradient(to left, #ff0000 0%, #c6019a 51%, #ff0000 100%);
+  
+  
+}
+
+body {
+  font-family: "Aclonica", sans-serif;
+  
+}
+
+
+.type-button:focus,  .button:focus, button:focus, .btn:focus {
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.type-button{
+      
+    height: 90px;
+    width: 385px;
+    font-size: 25px;
+    font-family: "Aclonica", sans-serif;
+    color: #fff;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    text-transform: capitalize;
+    background-size: 200% auto;
+    border: 1px solid transparent;
+    border-radius: 17px;
+}
+
+.type-button:hover {
+  color: #fff !important;
+  background-position: right center;
+}
+
+
+@media  (max-width: 932px) { 
+
+    .type-button{
+      
+        height: 70px;
+        width: 250px;
+        font-size: 16px;
+        font-weight: lighter;
+        font-family: "Aclonica", sans-serif;
+        color: #fff;
+        -o-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+        text-transform: capitalize;
+        background-size: 200% auto;
+        border: 1px solid transparent;
+        border-radius: 17px;
+
+    } 
+}
